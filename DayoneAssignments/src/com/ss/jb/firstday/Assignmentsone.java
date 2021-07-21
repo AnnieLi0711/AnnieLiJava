@@ -133,7 +133,6 @@ public class Assignmentsone {
     public static void main(String args[])
     {
 
-        
         printPatternfirst(4);
         printPatternsecond(4);
         printPatternthird(4);
