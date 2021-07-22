@@ -4,6 +4,7 @@
 package com.ss.jb.daythree;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.StandardOpenOption;
 import java.nio.file.Paths;
 
@@ -29,6 +30,13 @@ public class AssignmentstwoDThree {
 	{   //Define the text want to append with a line separator at the beginning
 		String s = System.lineSeparator() + "This is what I want to append";
 		//Write the text in new line in the given exiting file
-		Files.write(Paths.get("C:\\Users\\Li\\eclipse-workspace\\DaythreeAssignments\\Notes.txt"), s.getBytes(), StandardOpenOption.APPEND);
+		try
+		{
+		Files.write(Paths.get("C:\\Users\\Li\\git\\AnnieLiJava\\DaythreeAssignments\\Notes.txt"), s.getBytes(), StandardOpenOption.APPEND);
+		}
+		catch(NoSuchFileException ne)
+		{
+			System.out.println("File is not existing, please provide a valid file path");
+		}
 	}
 }

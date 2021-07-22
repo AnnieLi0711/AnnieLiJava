@@ -4,6 +4,7 @@
 package com.ss.jb.daythree;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -19,44 +20,67 @@ public class AssignmentsthreeDThree {
 	 */
 	public static void main(String[] args)  {
 		
-		char a=args[0].charAt(0);
+		char a;
+		
+       try {
+	       a=args[0].charAt(0);
+       }
+       catch(ArrayIndexOutOfBoundsException obe)
+       {
+    	   System.out.println("Please provide a character");
+    	   return;
+       }
 		AssignmentsthreeDThree obj=new AssignmentsthreeDThree();
-		try {
-			obj.countNumberofTimes(a);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		obj.countNumberofTimes(a);
 
 
 	}
 	
-	public void countNumberofTimes(char a) throws IOException
+	public void countNumberofTimes(char a) 
 	{
 		//Create a file object
-		File f=new File("C:\\Users\\Li\\eclipse-workspace\\DaythreeAssignments\\Notes.txt");
+		File f=new File("C:\\Users\\Li\\git\\AnnieLiJava\\DaythreeAssignments\\Notes.txt");
 		
 		//Create file reader object
-		FileReader fr=new FileReader(f);
+		FileReader fr;
+		BufferedReader br;
+		try {
+			fr = new FileReader(f);
+		
 		
 		//Create buffered reader object
-		BufferedReader br=new BufferedReader(fr);
+		    br=new BufferedReader(fr);
+		}
+		catch (FileNotFoundException e) {
+			System.out.println("Please provide a file which has content");
+			return;
+		}
 		
 		int c = 0;
 		int num=0;
 		//read the character in the file and compare it to the input character
-		while((c = br.read()) != -1)
-	      {
-			    
-	            char character = (char) c;
-	            if (a==character)
-	            {
-	            	num++;
-	            }
-	      }
+		try {
+			while((c = br.read()) != -1)
+			  {
+				    
+			        char character = (char) c;
+			        if (a==character)
+			        {
+			        	num++;
+			        }
+			  }
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println("Total number of times the character appears in the file is "+ num);
-		br.close();
+		try {
+			br.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 

@@ -47,7 +47,7 @@ public class AssignmentsoneDThree {
     public static void main(String[] args)
     {
         // Provide path for directory  
-        String directoryName = "C:\\Users\\Li\\git\\AnnieLiJava\\DayoneAssignments";
+        String directoryName = "C:\\Users\\Li\\Desktop\\Test";
                   
         // Create File object
         File file1 = new File(directoryName);
@@ -62,6 +62,11 @@ public class AssignmentsoneDThree {
           AssignmentsoneDThree obj= new AssignmentsoneDThree();
           obj.printFileNames(a, 0);
        } 
+        //When the file path is not existing,print out a message to user
+        else 
+        {
+        	System.out.println("Please provide a valid path");
+        }
     }
 
 }
