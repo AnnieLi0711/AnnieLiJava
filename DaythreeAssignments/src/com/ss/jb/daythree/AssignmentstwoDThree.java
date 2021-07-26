@@ -12,13 +12,14 @@ import java.nio.file.Paths;
  * @author Li
  *
  */
+//
 public class AssignmentstwoDThree {
 
 	/**
 	 * @param args
 	 * @throws IOException 
 	 */
-
+//Write a Java program to append text to an existing file.
 	public static void main(String[] args) throws IOException {
 		AssignmentstwoDThree obj=new AssignmentstwoDThree();
 		obj.appendToExistingFile();

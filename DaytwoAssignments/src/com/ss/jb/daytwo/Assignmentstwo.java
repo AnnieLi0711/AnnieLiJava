@@ -7,6 +7,7 @@ package com.ss.jb.daytwo;
  * @author Li
  *
  */
+//Construct a 2D array and find the max number and show its position in the array.
 public class Assignmentstwo {
 
 	/**

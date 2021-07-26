@@ -7,6 +7,7 @@ package com.ss.jb.daytwo;
  * @author Li
  *
  */
+//Take multiple values from the command line and show the result of adding all of them.
 public class Assignmentsone {
 
 	/**

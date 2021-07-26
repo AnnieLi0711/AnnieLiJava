@@ -5,6 +5,7 @@ package com.ss.jb.firstday;
  * @author Li
  *
  */
+//Write a Java program that prints out the following patterns using loops:
 public class Assignmentsone {
 
 	/**

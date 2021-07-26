@@ -7,6 +7,7 @@ package com.ss.jb.daytwo;
  * @author Li
  *
  */
+//Create a Shape Interface with the methods "calculateArea" and "display". Create a Rectangle, Circle, and Triangle class to implement that interface.
 public interface Shape {
 
 	public double calculateArea();

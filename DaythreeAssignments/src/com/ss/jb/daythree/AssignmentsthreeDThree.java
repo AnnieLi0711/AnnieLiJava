@@ -12,6 +12,7 @@ import java.io.IOException;
  * @author Li
  *
  */
+//Write a Java program that counts the number of times a particular character, such as 'e', appears in a file. The character can be specified at the command line.
 public class AssignmentsthreeDThree {
 
 	/**
