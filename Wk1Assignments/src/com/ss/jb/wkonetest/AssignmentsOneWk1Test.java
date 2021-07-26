@@ -25,6 +25,8 @@ public class AssignmentsOneWk1Test {
 		assertTrue(!(new AssignmentsOneWk1().isOdd().check(14)));
 		//Test Case 3: Number 0
 		assertTrue(!(new AssignmentsOneWk1().isOdd().check(0)));
+		//Test Case 4: Negative Odd Number
+		assertTrue(new AssignmentsOneWk1().isOdd().check(-7));
 	}
 	
 	@Test
